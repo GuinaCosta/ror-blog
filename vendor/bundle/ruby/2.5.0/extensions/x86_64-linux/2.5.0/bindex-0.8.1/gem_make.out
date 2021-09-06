@@ -1,0 +1,15 @@
+current directory: /home/agnaldo_almeida/code/pessoal/ror-blog/blog/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.5 -r ./siteconf20210906-6001-erycvp.rb extconf.rb
+creating Makefile
+
+current directory: /home/agnaldo_almeida/code/pessoal/ror-blog/blog/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/agnaldo_almeida/code/pessoal/ror-blog/blog/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/agnaldo_almeida/code/pessoal/ror-blog/blog/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20210906-6001-3q8e0j/skiptrace/internal

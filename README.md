@@ -1,5 +1,8 @@
 # README
 
+## Source of Truth
+ - Reference link: https://guides.rubyonrails.org/getting_started.html
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

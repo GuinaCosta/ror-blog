@@ -3,7 +3,39 @@
 <p><%= @article.body %></p>
 <br>
 <div>
-  <%= link_to "Edit", edit_article_path(@article) %><br>
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <span> | </span>
   <%= link_to "Destroy", article_path(@article), method: :delete,
     data: { confirm: 'Pode deletar mesmo?' } %>
+  <span> | </span>
+  <%= link_to "Index" %>
 </div>
+
+<h2>Comments made:</h2>
+<% @article.comments.each do |comment| %>
+  <div>
+    <p>
+      <strong>Commenter:</strong><br>
+      <%= comment.commenter %>
+      <br>
+      <strong>Comment:</strong><br>
+      <%= comment.body %>
+    </p>
+  </div>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+  <p>
+    <%= form.label  :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= form.label  :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

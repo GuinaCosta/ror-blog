@@ -12,30 +12,12 @@
 </div>
 
 <h2>Comments made:</h2>
-<% @article.comments.each do |comment| %>
-  <div>
-    <p>
-      <strong>Commenter:</strong><br>
-      <%= comment.commenter %>
-      <br>
-      <strong>Comment:</strong><br>
-      <%= comment.body %>
-    </p>
-  </div>
-<% end %>
+<p>
+  <%= @article.comments.public_count %> public comments made
+</p>
+<%= render @article.comments %>
+<%# @article.comments.each do |comment| %>
+<%# end %>
 
 <h2>Add a comment:</h2>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label  :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-
-  <p>
-    <%= form.label  :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
